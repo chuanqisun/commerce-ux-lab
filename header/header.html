@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body id="sticky-top">
+  <p id="sticky-bottom" class="promo-strip">15% off all our Forest series! | Free shipping on orders of $49 or more</p>
+  <header id="sticky-flag" class="header">
+    <div class="lo-header-3c">
+      <img class="lo-header-3c__logo" src="assets/logo-full.svg">
+      <input class="lo-header-3c__search search-input" type="search" placeholder="Search">
+      <span class="toolbox lo-header-3c__toolbox">
+        <a href="#">Sign in</a>
+        <button class="ghost-button"><img width="16px" src="assets/Heart.svg"></button>
+        <span>|</span>
+        <button class="ghost-button"><img width="16px" src="assets/Shop.svg"><span>(0)</span></button>
+      </span>
+      <nav class="lo-header-3c__nav">
+          <a href='#'>Forest series</a>
+          <a href='#'>Men</a>
+          <a href='#'>Women</a>
+          <a href='#'>Accessories</a>
+      </nav>
+    </div>
+
+  </header>
+  <main class="main-mock">
+  </main>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    * {
+      box-sizing: inherit;
+      font-family: inherit;
+    }
+
+    /* layouts */
+    .lo-header-3c {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: 48px 24px;
+      grid-gap: 8px 24px;
+      align-items: center;
+    }
+
+    .lo-header-3c__logo {
+      width: 100%;
+      min-width: 120px;
+      max-width: 200px;
+      max-height: 48px;
+    }
+
+    .lo-header-3c__search {
+      justify-self: center;
+    }
+
+    .lo-header-3c__toolbox {
+      justify-self: end;
+    }
+
+    .lo-header-3c__nav {
+      grid-column: 1 / -1;
+    }
+
+    /* components */
+    .header {
+      background-color: white;
+      position: sticky;
+      top: 0px;
+    }
+    .promo-strip {
+      margin: 0;
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .ghost-button {
+      background: none;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .search-input {
+      padding: 4px 0 4px 24px;
+      background-image: url(assets/Search.svg);
+      background-repeat: no-repeat;
+      background-position: center left 4px;
+      background-size: 16px 16px;
+      border: none;
+      border-bottom: 1px solid black;
+      width: 280px;
+    }
+    .toolbox {
+      display: flex;
+      align-items: center;
+    }
+    .main-mock {
+      background: linear-gradient(#00978d 0%, #f3b6c9 100%) no-repeat 50% 50% / 100% 100%;
+      height: 200vh;
+    }
+  </style>
+</body>
+</html>
