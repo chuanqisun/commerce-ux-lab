@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <header class="header">
+    <img class="header__logo" src="assets/logo-full.svg">
+    <span class="header__toolbox">
+      <span class="search-container">
+          <input id="search-box" class="search-input" type="search" placeholder="Search">
+          <label for="search-box">Search</label>
+        </span>
+      <button>Sign in ▾</button>
+      <button class="ghost-button"><img width="16px" src="assets/Heart.svg"></button>
+      <span>|</span>
+      <button class="ghost-button"><img width="16px" src="assets/Shop.svg"><span>(0)</span></button>
+    </span>
+    <nav class="header__nav">
+        <a contenteditable href='#'>Forest series</a>
+        <a contenteditable href='#'>Men</a>
+        <a contenteditable href='#'>Women</a>
+        <a contenteditable href='#'>Accessories</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <button onclick="document.querySelector('.header').classList.toggle('header__sticky')">toggle sticky</button>
+  </main>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    * {
+      box-sizing: inherit;
+      font-family: inherit;
+    }
+
+    /* components */
+    .header {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 48px;
+      grid-gap: 24px;
+    }
+
+    .header__logo {
+      grid-column: 1 / span 1;
+    }
+
+    .header__toolbox {
+      grid-column: -2 / span 1;
+      justify-self: end;
+      white-space: nowrap;
+    }
+
+    .header__nav {
+      grid-row: 2;
+      grid-column: 1 / -1;
+      white-space: nowrap;
+    }
+
+    .header__sticky .header__logo {
+      display: none;
+    }
+
+    .header__sticky .header__nav {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-input {
+      position: absolute;
+      right: 0;
+      opacity: 0;
+      width: 0;
+    }
+
+    .search-input:focus {
+      opacity: 1;
+      width: 200px;
+    }
+
+    .search-input:focus + label {
+      display: none;
+    }
+
+    .main {
+      height: 300vh;
+    }
+  </style>
+</body>
+</html>
