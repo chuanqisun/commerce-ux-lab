@@ -10,10 +10,8 @@
     <div class="subgrid">
       <h1 class="logo">Fabrikam</h1>
       <div class="expandable-group slideup-counter">
-        <div class="center">
-          <input id="search-input" type="search">
-          <label for="search-input">Search</label>
-        </div>
+        <input id="search-input" placeholder="Search" type="search">
+        <label for="search-input">Search</label>
         <button>Sign in</button>
         <button>Wishlist</button>
         <button>Shopping Bag</button>
@@ -62,13 +60,9 @@
     }
 
     .subgrid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    }
-
-    .expandable-group {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     * {
@@ -99,31 +93,21 @@
     }
 
     #search-input {
-      transition: opacity 250ms;
-    }
-
-    #search-input + label {
-      display: none;
-    }
-
-
-    .sticky #search-input + label {
-      display: initial;
-    }
-
-    .sticky #search-input {
       opacity: 0;
       width: 0;
       border: none;
     }
-    .sticky #search-input:focus {
+
+    #search-input:focus {
       opacity: 1;
-      width: 100%;
       border-bottom: 1px solid black;
       outline: none;
+      width: 240px;
     }
-
-    .sticky #search-input:focus + label{
+    .sticky #search-input:focus {
+      width: 100%;
+    }
+    #search-input:focus + label{
       display: none;
     }
 
