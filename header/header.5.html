@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <header id="with-scroll-flag" class="header">
+    <div class="subgrid">
+      <h1 class="logo slideup-counter">Fabrikam</h1>
+      <div class="expandable-group slideup-counter">
+        <input id="search-input" placeholder="Search" type="search">
+        <label for="search-input">Search</label>
+        <button>Sign in</button>
+        <button>Wishlist</button>
+        <button>Shopping Bag</button>
+      </div>
+    </div>
+    <nav class="slide-right">Forest searies | Men | Women | Accessories</nav>
+  </header>
+  <main>
+    <div id="scroll-sentinel">.</div>
+  </main>
+
+  <style>
+    :root {
+      --slide-distance: 27px;
+      --counter-slide-distance: -27px;
+    }
+
+    header {
+      padding: 8px 16px;
+      height: 80px;
+      background-color: white;
+      position: sticky;
+      top: 0;
+      transition: transform 250ms;
+      overflow: hidden;
+    }
+
+    .slideup-counter {
+      transition: transform 250ms;
+    }
+
+    .sticky .slideup-counter {
+      transform: translateY(var(--slide-distance));
+    }
+
+    header.sticky {
+      transform: translateY(var(--counter-slide-distance));
+    }
+
+    .logo {
+      /* transition: opacity 250ms; */
+      margin: 0;
+    }
+
+    .slide-right {
+      transition: transform 250ms;
+    }
+
+    .sticky .slide-right{
+      transform: translateX(200px);
+    }
+
+    .subgrid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      white-space: nowrap;
+    }
+
+    main {
+      height: 300vh;
+      background: linear-gradient(#f3b6c9 0%, #007C97 100%) no-repeat 50% 50% / 100% 100%
+    }
+
+    .expandable-group {
+      position: absolute;
+      right: 16px;
+      left: 16px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    #search-input {
+      opacity: 0;
+      width: 0;
+      border: none;
+    }
+
+    #search-input:focus {
+      opacity: 1;
+      border-bottom: 1px solid black;
+      outline: none;
+      width: 240px;
+    }
+    .sticky #search-input:focus {
+      width: 100%;
+    }
+    #search-input:focus + label{
+      display: none;
+    }
+
+  </style>
+
+  <script>
+const observer = new IntersectionObserver(e => {
+  const flagTarget = document.getElementById('with-scroll-flag');
+  e[0].isIntersecting ? flagTarget.classList.remove('sticky') : flagTarget.classList.add('sticky');
+});
+observer.observe(document.getElementById('scroll-sentinel'));
+  </script>
+</body>
+</html>
