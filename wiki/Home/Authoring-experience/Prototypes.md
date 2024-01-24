@@ -1,0 +1,13 @@
+- 2019-07-30 Document lifecycle
+    - Action simplify: [xstate](https://xstate.js.org/viz/?gist=8f2c9f0ed5e697c95b36af2cbc2bdbfb)
+    - Taxonomy simplify: [xstate](https://xstate.js.org/viz/?gist=ef0cd36eda49f872a815cb854fff5190)
+    - Replica: [xstate](https://xstate.js.org/viz/?gist=7c835d985d143f240d4844f4dc735d00) | [src](https://gist.github.com/chuanqisun/7c835d985d143f240d4844f4dc735d00)
+- 2019-07-01 Module taxonomy
+    - Hero: [spec](https://hero-module-ia.stackblitz.io) | [src](https://stackblitz.com/edit/hero-module-ia)
+    - Feature: [spec](https://feature-module-ia.stackblitz.io) | [src](https://stackblitz.com/edit/feature-module-ia?file=index.js)
+- 2019-06-28 Canvas toolbar interaction
+    - Fixed tag on corner: [demo](https://canvas-toolbar-with-layer-selection-corner-tag.stackblitz.io/) | [src](https://stackblitz.com/edit/canvas-toolbar-with-layer-selection-corner-tag?file=index.js)
+    - No tag until stable: [demo](https://canvas-toolbar-with-layer-selection-no-tag.stackblitz.io) | [src](https://stackblitz.com/edit/canvas-toolbar-with-layer-selection-no-tag?file=Toolbar.js)
+    - With hover outline: [demo](https://canvas-toolbar-with-layer-selection-hover-style.stackblitz.io) | [src](https://stackblitz.com/edit/canvas-toolbar-with-layer-selection-hover-style)
+    - Baseline [demo](https://canvas-toolbar-with-layer-selection.stackblitz.io) | [src](https://stackblitz.com/edit/canvas-toolbar-with-layer-selection)
+- 2019-05-01 Site switching and IA: [demo](https://rushmore.netlify.com/) | [src (private)](https://github.com/chuanqisun/rushmore-alpha/tree/master/authoring-tool)
